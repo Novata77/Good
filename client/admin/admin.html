@@ -1,0 +1,22 @@
+<template name="admin">
+    {{#if isInRole 'admin'}}
+        <table class="centered">
+        <thead>
+            <tr>
+                <th data-field="id">Estudiantes</th>
+                <th data-field="name">Profesore</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each lista}}
+            <tr>
+                <td>{{username}} <a name={{_id}} href="#"><i class="material-icons">assignment</i>profesor</a></td>
+                <td>{{roles}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    {{else}}
+        NO ERES ADMINISTRADOR
+    {{/if}}   
+</template>

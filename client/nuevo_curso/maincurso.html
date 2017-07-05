@@ -1,0 +1,18 @@
+<template name="nuevo">
+    {{#if isInRole 'profesor'}}
+     <!-- Modal Trigger -->
+    <a class="waves-effect waves-light btn modal-trigger" href="#modal1">nuevo curso</a>
+    {{else}}
+        NO ERES TUTOR
+    {{/if}}
+
+       
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>nuevamateria</h4>
+                {{> formcurso}}
+        </div>
+    </div>
+
+</template>
