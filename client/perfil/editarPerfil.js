@@ -32,13 +32,13 @@ Template.editarperfil.events({
                "email" : e.target.email.value
      };
      var carrera={
-               "carrera" : e.target.Carrera.value
+               "carrera" : e.target.carreras.value
      };
      var nombre={
-               "Nombre" : e.target.Nombre.value
+               "Nombre" : e.target.lastname.value
      };
      var apellido={
-               "Apellido" : e.target.Apellido.value
+               "Apellido" : e.target.firstname.value
      };  
    Meteor.users.update( { _id: Meteor.userId() }, 
     { $set: 
