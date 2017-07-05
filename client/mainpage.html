@@ -8,10 +8,20 @@
         <li><a href="">Sobre Nosotros</a></li>
         {{#if currentUser}}
           <li><a href="#" id="logout">Loggout {{username}}</a></li>
+          <li><a href="/editar_perfil" id="">Editar perfil</a></li> 
         {{else}}
-          <li><a href="#" id="login">Login</a></li>  
+          <li><a href="#" id="login">Login</a></li> 
         {{/if}}
         </ul>
+        <ul id="nav-mobile" class="side-nav">
+
+      {{#if currentUser}}
+          <li><a href="#" id="logout">Salir {{username}}</a></li>
+        {{else}}
+          <li><a href="#" id="login">Ingresar</a></li>  
+        {{/if}}
+
+      </ul>
     </div>
   </nav>
   <div class="row"> 
@@ -54,6 +64,9 @@
   </div>
 
  {{>Template.dynamic template=banner}}
+ {{#each Curso}}
+ {{> cursos}}
+ {{/each}}
 
    <footer class="page-footer teal">
     <div class="container">
