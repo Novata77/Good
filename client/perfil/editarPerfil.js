@@ -1,9 +1,9 @@
-Template.editarperfil.onRendered(function(){
+Template.editarPerfil.onRendered(function(){
   $("select").material_select();
   $('.modal').modal();
 });
 Meteor.subscribe('userData');
-Template.editarperfil.helpers({
+Template.editarPerfil.helpers({
 
   username : function(){
     return Accounts.user().username
@@ -11,18 +11,18 @@ Template.editarperfil.helpers({
   email : function(){
     return Accounts.user().emails[0].address
   },
-  profileNombre : function(){
+  profilefirstname : function(){
     return Accounts.user().profile.firstname
   },
-  profileApellido : function(){
+  profilelastname : function(){
     return Accounts.user().profile.lastname
   },
-  profileCarrera : function(){
+  profilecarreras : function(){
     return Accounts.user().profile.carreras
   }
 });
 Meteor.subscribe('allUsers');
-Template.editarperfil.events({
+Template.editarPerfil.events({
   'submit form': function(e) {
     e.preventDefault();
     var usuario = {
@@ -32,13 +32,13 @@ Template.editarperfil.events({
                "email" : e.target.email.value
      };
      var carrera={
-               "carrera" : e.target.carreras.value
+               "carreras" : e.target.carreras.value
      };
      var nombre={
-               "Nombre" : e.target.lastname.value
+               "firstname" : e.target.firstname.value
      };
      var apellido={
-               "Apellido" : e.target.firstname.value
+               "lastname" : e.target.lastname.value
      };  
    Meteor.users.update( { _id: Meteor.userId() }, 
     { $set: 
