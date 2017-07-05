@@ -1,3 +1,20 @@
+CURSO = new Mongo.Collection("curso");
+var CursoSchema = new SimpleSchema({
+    titulo: {
+        type: String
+    },
+    descripcion: {
+        type: String
+    },
+    fecha: {
+        type: String
+    },
+    idpro: {
+        type: String
+    }
+});
+CURSO.attachSchema(CursoSchema);
+
 CHAT = new  Mongo.Collection("chat");
 CONNECT = new Mongo.Collection("connect");
 var chatSchema = new SimpleSchema({
