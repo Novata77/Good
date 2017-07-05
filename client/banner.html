@@ -12,6 +12,16 @@
         <div class="row center">
           <h5 class="header col s12 light">l mundo necesita mas desarrolladores</h5>
         </div>
+        <div class="row center">
+           {{#if isInRole 'admin'}} 
+           <a href="/admin" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">admin</a>
+           {{else}}
+           {{#if  isInRole 'profesor'}}
+           <a href="/nuevo_curso" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">nuevo</a>
+           {{else}}
+           {{/if}}
+           {{/if}}
+        </div><br><br>
       </div>
     </div>
     <div class="parallax"><img src="007.jpg" alt="Unsplashed background img 2"></div>
