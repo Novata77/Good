@@ -1,0 +1,93 @@
+<template name="registerForm">
+	<form action="" method="POST">
+          <div class="row">
+            <div class="col s11">
+              <legend>Registro</legend>
+            </div>
+            <div class="col s1">
+              <a href="" id="close">X</a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s6">
+              <div class="input-field"> 
+            <div class="form-group">
+              <label class="control-label" for="nombre"></label>
+              <span class="help-block"></span>
+              <input type="text" class="form-control" name="firstname" id="" placeholder="nombres">
+            </div>
+          </div>
+          <div class="form-group">
+              <label class="control-label" for="apellido"></label>
+              <span class="help-block"></span>
+              <input type="text" class="form-control" name="lastname" id="" placeholder="apellidos">
+            </div>
+            </div>
+            <div class="col s6">
+              <div class="input-field"> 
+            <div class="form-group">
+              <label class="control-label" for="usuario"></label>
+              <span class="help-block"></span>
+              <input type="text" class="form-control" name="username" id="" placeholder="usuario">
+            </div>
+          </div>
+            </div>
+            <div class="col s6">
+              <div class="input-field"> 
+            <div class="form-group">
+              <label class="control-label" for="email"></label>
+              <span class="help-block"></span>
+              <input type="text" name="email" class="form-control" id="" placeholder="Email">
+            </div>
+          </div>
+            </div>
+          </div>
+          <div class="row">
+          	<div class="col s6">
+              <div class="input-field"> 
+            	<div class="form-group">
+              	
+              	<select name="carreras">
+              		<option value="sistemas">Sistemas</option>
+              		<option value="informatica">informatica</option>
+              		<option value="electronica">electronica</option>
+              	</select>
+
+            		</div>
+          		</div>
+            </div>
+          </div>
+          <div class="row">
+          	<div class="col s6">
+          		<div class="input-field"> 
+            		<div class="form-group">
+              			<label class="control-label" for="password"></label>
+              			<span class="help-block"></span>
+              			<input type="password" name="password" class="form-control" id="" placeholder="contraseña">
+            		</div>
+          		</div>
+          	</div>
+          	<div class="col s6">
+          		<div class="input-field"> 
+            		<div class="form-group">
+              			<label class="control-label" for="password"></label>
+              			<span class="help-block"></span>
+              			<input type="password" name="repassword" class="form-control" id="" placeholder="re. contraseña">
+            		</div>
+          		</div>
+          	</div>
+          </div>
+          <div class="row">
+            <div class="col s4">
+                <button type="submit" class="btn" >Crear cuenta</button>
+            </div>
+            <div class="col s4">
+              
+            </div>
+            <div class="col s4">
+                <button type="button" id="return" class="btn">Volver</button>
+              
+            </div>
+          </div>
+        </form>
+</template>

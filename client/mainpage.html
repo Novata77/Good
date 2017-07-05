@@ -1,0 +1,82 @@
+<template name="mainpage">
+<nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo">BEL</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/">Home</a></li>
+        <li><a href="#">cursos</a></li>
+        <li><a href="">Sobre Nosotros</a></li>
+        {{#if currentUser}}
+          <li><a href="#" id="logout">Loggout {{username}}</a></li>
+        {{else}}
+          <li><a href="#" id="login">Login</a></li>  
+        {{/if}}
+        </ul>
+    </div>
+  </nav>
+  <div class="row"> 
+    {{>mainModuleLoggin}}
+  </div>
+  <div class="slider">
+    <ul class="slides">
+      <li>
+        <img src="005.jpg"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>Cursos de Diseño Web!</h3>
+          <h5 class="light grey-text text-lighten-3">Desarrollando paginas web con las herramientas mas actuales</h5>
+        </div>
+      </li>
+      <li>
+        <img src="005.jpg"> <!-- random image -->
+        <div class="caption left-align">
+          <h3>Cursos de Diseño Web</h3>
+          <h5 class="light grey-text text-lighten-3">Desarrollando paginas web con las herramientas mas actuales.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="principal.jpg"> <!-- random image -->
+        <div class="caption right-align">
+          <h3>Cursos de Diseño Web</h3>
+          <h5 class="light grey-text text-lighten-3">Desarrollando paginas web con las herramientas mas actuales.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="010.jpg"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>Cursos de Diseño Web!</h3>
+          <h5 class="light grey-text text-lighten-3">Desarrollando paginas web con las herramientas mas actuales.</h5>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="container">
+    {{>Template.dynamic template=content}}
+  </div>
+
+ {{>Template.dynamic template=banner}}
+
+   <footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">isabel ayarachi</h5>
+          <p class="grey-text text-lighten-4"> soy una estudiante universitaria trabajando en este proyecto como si fuera mi trabajo a tiempo completo.</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Ajustes</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      isabel <a class="brown-text text-lighten-3" href="#">Mi proyecto</a>
+      </div>
+    </div>
+  </footer>
+</template>

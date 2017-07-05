@@ -1,0 +1,104 @@
+<template name="editarperfil">
+
+          <div class="row">
+            <div class="col s11">
+              <legend><h4>cambiar datos personales</h4></legend>
+            </div>
+            <div class="col s1">
+              <a href="" id="close">X</a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s6">
+                  <h5>Nombres</h5>
+                  <p>{{profilefirstname}}</p>    
+            </div>
+
+            
+              
+            <div class="col s6">
+                  <h5>Apellidos</h5>
+                  <p>{{profilelastname}}</p> 
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col s6">
+                  <h5>Usuario</h5>
+                  <p>{{username}}</p> 
+            </div>
+            <div class="col s6">
+                  <h5>Email</h5>
+                  <p>{{email}}</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col s6">
+                  <h5>Carreras</h5>
+                  <p>{{profilecarreras}}</p>  
+            </div>
+          </div>
+        <a href="#modal1" class="waves-effect waves-light btn"><i class="material-icons left">mode_edit</i>Editar</a>
+
+          <div id="modal1" class="modal">
+              <div class="modal-content">
+                  <form action="" method="POST">
+                    <div class="row">
+                      <div class="col s11">
+                        <legend>Editar</legend>
+                      </div>
+                      <div class="col s1">
+                        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">x</a>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="input-field col s6">
+                            <i class="material-icons prefix">Nombre</i>
+                            <input placeholder="Nombre" type="text" class="form-control" name="firstname" value="{{profilefirstname}}">
+                            
+                      </div>
+                      <div class="input-field col s6">
+                            <i class="material-icons prefix">Apellido</i>
+                            <input placeholder="Apellido" type="text" class="form-control" name="lastname" value="{{profilelastname}}">
+                            
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col s6">
+                        <p>Seleccione carrera<i class="material-icons prefix">input</i></p>
+                      </div>
+                      <div class="col s6">
+                        <div class="input-field"> 
+                          <div class="form-group">
+                            <select name="Carrera">
+                              <option value="sistemas"> Sistemas</option>
+                              <option value="informatica"> Informatica</option>
+                              <option value="electronica">electronica</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="input-field col s6">
+                            <i class="material-icons prefix">assignment_ind</i>
+                            <input type="text" name="username" class="form-control" id="" placeholder="Nick" value="{{username}}">
+                         
+                      </div>
+                      <div class="input-field col s6">
+                            <i class="material-icons prefix">email</i>
+                            <input type="text" name="email" class="form-control" id="" placeholder="Email" value="{{email}}">
+                            
+                      </div>
+                    </div>        
+                    <div class="row">
+                      <div class="col s4">
+                          <button type="submit" class="btn">guardar</button>
+
+                      </div>
+                    </div>
+                </form>
+              </div>
+            </div>
+</template>
