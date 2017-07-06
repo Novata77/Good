@@ -8,8 +8,14 @@ Template.mainpage.onRendered(function(){
 Template.mainpage.helpers({
 	username : function(){
 		return Accounts.user().username;
-	}
-})
+	},
+	ready: function(){
+    return FlowRouter.subsReady("datos");
+  },
+  Cursover: function(){
+    return CURSO.find();
+  }
+});
 
 Template.mainpage.events({
 	"click #login" : function(){
@@ -19,3 +25,24 @@ Template.mainpage.events({
 		Meteor.logout();
 	}
 })
+
+Template.mainpage.onRendered(function(){
+    $('.button-collapse').sideNav();
+    $('.parallax').parallax();
+});
+
+Template.cursos.onRendered(function(){
+    $('.button-collapse').sideNav();
+    $('.parallax').parallax();
+});
+
+Template.nuevocurso.onRendered(function(){
+    $('.button-collapse').sideNav();
+    $('.parallax').parallax();
+    $('.modal').modal();
+});
+
+Template.formcurso.onRendered(function(){
+    $('.button-collapse').sideNav();
+    $('.parallax').parallax();
+});
